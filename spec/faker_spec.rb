@@ -1,4 +1,4 @@
-describe "tests" do
+describe "tests for random generator" do
 
   before(:all) do
     @random_data = Generator.new
@@ -8,9 +8,9 @@ describe "tests" do
     expect(@random_data.name).to be_kind_of String
   end
 
-  # it 'capital' do
-  #   expect(@random_data.capital_name).to be true
-  # end
+  it 'capital' do
+    expect(@random_data.capital_name).to be true
+  end
 
   it 'address should return a string' do
     expect(@random_data.address_user).to be_kind_of String
@@ -40,8 +40,27 @@ describe "tests" do
     expect(@random_data.phone_number_user).to be_kind_of String
   end
 
+  it 'university should return a string' do
+    expect(@random_data.university_user).to be_kind_of String
+  end
 
+  it 'programming language of user should return a string' do
+    expect(@random_data.programming_language_user).to be_kind_of String
+  end
 
+  it 'bank account number should return an string' do
+    expect(@random_data.bank_account_number_user).to be_kind_of String
+  end
 
+  it 'company industry should return an string' do
+    expect(@random_data.company_industry_user).to be_kind_of String
+  end
 
+  it 'company should return an string' do
+    expect(@random_data.company_user).to be_kind_of String
+  end
+
+  it 'marital status should return an string' do
+    expect(@random_data.marital_status_user).to be_kind_of String
+  end
 end

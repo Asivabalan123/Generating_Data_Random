@@ -13,9 +13,9 @@ class Generator
     @first_name = Faker::Name.name
   end
 
-  # def capital_name
-  #   @first_name.capitalize
-  # end
+  def capital_name
+    @first_name.start_with? /[A-Z]/
+  end
 
   def address_user
     @address = Faker::Address.street_address
@@ -75,20 +75,3 @@ class Generator
   end
 
 end
-
-# test = Generator.new
-# puts test.name
-# puts test.gender_user
-# puts test.nationality_user
-# puts test.address_user
-# puts test.postcode_user
-# puts test.job_title
-# puts test.date_of_birth_user
-# puts test.age
-# puts test.phone_number_user
-# puts test.university_user
-# puts test.programming_language_user
-# puts test.bank_account_number_user
-# puts test.company_industry_user
-# puts test.company_user
-# puts test.marital_status_user
